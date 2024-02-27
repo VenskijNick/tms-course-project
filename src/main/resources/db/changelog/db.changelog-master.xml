@@ -10,4 +10,5 @@
     <changeSet id="1" author="Nick">
         <tagDatabase tag="v.1.0"/>
     </changeSet>
+
 </databaseChangeLog>

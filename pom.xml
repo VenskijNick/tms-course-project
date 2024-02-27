@@ -114,8 +114,9 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
+            <version>42.5.1</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
         <dependency>
             <groupId>com.itextpdf</groupId>
@@ -154,7 +155,13 @@
             <artifactId>javax.mail</artifactId>
             <version>1.6.2</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/org.jdbi/jdbi3-postgres -->
+        <dependency>
+            <groupId>org.jdbi</groupId>
+            <artifactId>jdbi3-postgres</artifactId>
+            <version>3.41.3</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
