@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="09" author="Nick">
+        <createTable tableName="users">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_name" type="varchar(30)">
+                <constraints unique="true"/>
+            </column>
+            <column name="password" type="varchar(255)"/>
+            <column name="name" type="varchar(30)"/>
+            <column name="surname" type="varchar(30)"/>
+            <column name="email" type="varchar(30)"/>
+            <column name="image" type="text"/>
+
+        </createTable>
+        <insert tableName="users">
+            <column name="id" value="1"/>
+            <column name="user_name" value="ADMIN"/>
+            <column name="password" value="$2a$12$kwx1HH3DElFG1mHHJj/AieYN0/bZdDklHJecV1duy6khLzcAZxMcO"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="2"/>
+            <column name="user_name" value="USER"/>
+            <column name="password" value="$2a$12$kwx1HH3DElFG1mHHJj/AieYN0/bZdDklHJecV1duy6khLzcAZxMcO"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
